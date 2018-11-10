@@ -13,10 +13,6 @@
 	margin: 1em auto 2em;
 }
 
-.navbar + .jumbotron {
-	margin-top: -20px;
-}
-
 .jumbotron .lang-logo {
 	display: block;
 	background: #B01302;
@@ -32,3 +28,7 @@
 	max-width: 100%;
 }
 
+.emoji{
+	font-size: 20px;
+	
+}

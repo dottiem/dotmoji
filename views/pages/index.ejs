@@ -2,6 +2,7 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+
 </head>
 
 <body>
@@ -17,10 +18,26 @@
 
   </div>
 </div>
+
+
+
 <div class="container">
+	
+	<table class="emoji">
+	<% for(var i=0; i < emojis.length; i++) { %>
+	   <tr>
+	     <td><%= emojis[i].no %></td>
+	     <td><%= emojis[i].codes %></td>
+	     <td><%= emojis[i].char %></td>
+	     <td><%= emojis[i].name %></td>
+	     <td><%= emojis[i].keywords %></td>
+	   </tr>
+	<% } %>
+	</table>
+
 
 </div>
-  
+ 
 
 </body>
 </html>

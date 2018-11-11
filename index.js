@@ -25,6 +25,21 @@ secretDictionary["scarlett"] = "💀";
 secretDictionary["fergus"] = "🐶"; 
 secretDictionary["tired"] = "😴";
 secretDictionary["sleepy"] = "😴";
+secretDictionary["awake"] = "😊";
+secretDictionary["adorable"] = "😍";
+secretDictionary["awesome"] = "👍";
+secretDictionary["asleep"] = "💤";
+secretDictionary["happy"] = "😄";
+secretDictionary["bathroom"] = "💩";
+secretDictionary["sad"] = "😦";
+secretDictionary["angry"] = "😠";
+secretDictionary["hungry"] = "🎂";
+secretDictionary["cukoo"] = "👉";
+secretDictionary["crazy"] = "👉";
+secretDictionary["gross"] = "😰";
+secretDictionary["shush"] = "😈";
+secretDictionary["stinky"] = "👃";
+secretDictionary["funny"] = "😂";
 
 
 
@@ -33,6 +48,7 @@ var app = express().use(express.static(path.join(__dirname, 'public'))).set('vie
 
 app.get('/', (req, res) => res.render('pages/index', {}))
 
+app.get('/wallpaper', (req, res) => res.render('pages/wallpaper', { emojis: emoji } ))
 app.get('/emojis', (req, res) => res.render('pages/emojis', { emojis: emoji } ))
 
 app.get('/translate/:id', function(request, response) {

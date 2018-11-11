@@ -3,6 +3,7 @@
 	color: white;
 	padding-bottom: 10px;
 	font-family: 'Raleway', sans-serif;
+	
 }
 
 
@@ -30,5 +31,9 @@
 
 .emoji{
 	font-size: 40px;
+}
+
+.trans {
 	
+	opacity: 0.3;
 }

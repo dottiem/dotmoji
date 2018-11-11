@@ -55,13 +55,17 @@ secretDictionary["sun"] = "🌞";
 secretDictionary["night"] = "🌜";
 secretDictionary["nighttime"] = "🌜";
 secretDictionary["moon"] = "🌜";
-secretDictionary["parent"] = ""👤;
+secretDictionary["parent"] = "👤";
 secretDictionary["parents"] = "👥";
 secretDictionary["new years"] = "🎉";
 secretDictionary["new years eve"] = "🎉";
 secretDictionary["tv"] = "📺";
 secretDictionary["television"] = "📺";
 secretDictionary["video game"] = "🎮";
+
+
+
+
 
 secretDictionary["want"] = "✌";
 secretDictionary["watch"] = "👀";

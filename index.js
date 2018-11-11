@@ -30,6 +30,7 @@ secretDictionary["awesome"] = "👍";
 secretDictionary["asleep"] = "💤";
 secretDictionary["happy"] = "😄";
 secretDictionary["bathroom"] = "💩";
+secretDictionary["poop"] = "💩";
 secretDictionary["sad"] = "😦";
 secretDictionary["angry"] = "😠";
 secretDictionary["hungry"] = "🎂";

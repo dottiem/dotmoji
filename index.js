@@ -7,13 +7,31 @@ var emoji = require('emoji.json')
 
 var secretDictionary = new Object();
 secretDictionary["i"] = emoji[404].char;
+secretDictionary["you"] = emoji[884].char;
+secretDictionary["am"] = emoji[577].char;
+secretDictionary["are"] = emoji[396].char;
+secretDictionary["hello"] = emoji[386].char;
+secretDictionary["yes"] = emoji[413].char;
+secretDictionary["no"] = emoji[415].char;
+secretDictionary["agree"] = emoji[24].char;
+secretDictionary["disagree"] = emoji[410].char;
+
+
+secretDictionary["cora"] = "👑";
+secretDictionary["dottie"] = "⚽";
+secretDictionary["veda"] = "📘"
+secretDictionary["esther"] = "🐻"; 
+secretDictionary["scarlett"] = "💀"; 
+secretDictionary["fergus"] = "🐶"; 
+secretDictionary["tired"] = "😴";
+secretDictionary["sleepy"] = "😴";
+
+
 
 
 var app = express().use(express.static(path.join(__dirname, 'public'))).set('views', path.join(__dirname, 'views')).set('view engine', 'ejs');
 
 app.get('/', (req, res) => res.render('pages/index', {}))
-
-app.get('/translator', (req, res) => res.render('pages/translator', {}))
 
 app.get('/emojis', (req, res) => res.render('pages/emojis', { emojis: emoji } ))
 

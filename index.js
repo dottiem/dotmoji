@@ -69,9 +69,9 @@ secretDictionary["video game"] = "🎮";
 
 secretDictionary["want"] = "✌";
 secretDictionary["watch"] = "👀";
-secretDictionary["play"] = "";
-secretDictionary["snowing "] = 🌨"";
-secretDictionary["sharpen"] = "";
+
+
+
 secretDictionary["love"] = "😎";
 secretDictionary["hate"] = "😖";
 secretDictionary["get dressed"] = "👖";

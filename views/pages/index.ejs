@@ -6,16 +6,32 @@
   <script>
 	  $(document).ready(function(){
 		$('#translator').click(function(){
-			$('#translation').empty().hide();
-			var dataToTranslate = document.getElementById('data').value;
-			var translationUrl = '/translate/' + dataToTranslate;
-			$.getJSON(translationUrl, function(data) {
-				$.each( data, function( key, val ) {
-					$('#translation').append(val + " ").fadeIn();
-				});
-			});
+			translate();
 		});
 	  });
+	  
+	  $(document).ready(function(){
+	     $('input').bind("enterKey",function(e){
+	       translate();
+	     });
+	     $('input').keyup(function(e){
+	       if(e.keyCode == 13)
+	       {
+	          $(this).trigger("enterKey");
+	       }
+	     });
+	  });
+	  
+	  function translate(){
+		$('#translation').empty().hide();
+		var dataToTranslate = document.getElementById('data').value;
+		var translationUrl = '/translate/' + dataToTranslate;
+		$.getJSON(translationUrl, function(data) {
+			$.each( data, function( key, val ) {
+				$('#translation').append(val + " ").fadeIn();
+			});
+		});
+	  }
   </script>
 
 </head>

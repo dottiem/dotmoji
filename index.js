@@ -83,8 +83,24 @@ secretDictionary["hate"] = "😖";
 secretDictionary["get dressed"] = "👖";
 secretDictionary["dressed"] = "👖";
 secretDictionary["getting dressed"] = "👖";
+secretDictionary["us"] = emoji[1623].char;
+secretDictionary["usa"] = emoji[1623].char;
 
 
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+};
+
+emoji.forEach(function(element) {
+	if ((element.no < 1300) || (element.no > 1355)) {
+	    var newName = element.name.replaceAll(" ", "-").toLowerCase();
+		if (newName in secretDictionary){} else {secretDictionary[newName] = element.char;}
+	}
+});
+
+
+	
 
 
 var app = express().use(express.static(path.join(__dirname, 'public'))).set('views', path.join(__dirname, 'views')).set('view engine', 'ejs');
@@ -119,7 +135,7 @@ app.get('/translate/:id', function(request, response) {
 			}
 			if (period)  translation[pos] = translation[pos] + ".";
 			else if (comma)  translation[pos] = translation[pos] + ",";
-			else if (exclaim)  translation[pos] = translation[pos] + "!";
+			else if (exclaim) 	 translation[pos] = translation[pos] + "!";
 			pos++;
 		}
 	});

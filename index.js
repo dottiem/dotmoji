@@ -131,6 +131,8 @@ app.get('/translate/:id', function(request, response) {
 			if(comma || period || exclaim) lowercaseWord = lowercaseWord.substring(0, lowercaseWord.length-1);
 			if (lowercaseWord in secretDictionary) {
 				translation[pos] = secretDictionary[lowercaseWord]; 
+			} else if (lowercaseWord.endsWith("s") && ( lowercaseWord.substring(0, lowercaseWord.length-1) in secretDictionary)) {
+				translation[pos] = secretDictionary[lowercaseWord.substring(0, lowercaseWord.length-1)]; 
 			} else {
 				translation[pos] = lowercaseWord;
 			}

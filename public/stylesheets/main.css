@@ -30,10 +30,51 @@
 }
 
 .emoji{
-	font-size: 40px;
+	font-size: 30px;
 }
 
 .trans {
 	
 	opacity: 0.3;
+}
+
+
+.say {
+	
+	background-image: url('/say.png');
+	width:594px;
+	height:490px;
+	
+}
+
+.emojidude {
+	width:280px;
+	height:490px;
+	vertical-align: bottom;
+}
+
+
+.think {
+	background-image: url('/think.png');
+	width:594px;
+	height:490px;
+	
+	font-size: 30px;
+	
+	
+}
+
+#data {
+	border:0px;
+	margin-left:115px;
+	width:350px;
+	height:200px;
+	
+}
+
+#translation {
+	
+	margin-left:105px;
+	width:400px;
+	height:200px;
 }

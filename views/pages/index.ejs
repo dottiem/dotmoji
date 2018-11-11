@@ -11,10 +11,10 @@
 	  });
 	  
 	  $(document).ready(function(){
-	     $('input').bind("enterKey",function(e){
+	     $('textarea').bind("enterKey",function(e){
 	       translate();
 	     });
-	     $('input').keyup(function(e){
+	     $('textarea').keyup(function(e){
 	       if(e.keyCode == 13)
 	       {
 	          $(this).trigger("enterKey");
@@ -50,16 +50,17 @@
   </div>
 </div>
 
-
-
-<div class="container">
 	<center>
-	<p><input id="data" size="100" value="" />
-	<input id="translator" type="button" value="translate" /></p>
-	<p><div id="translation" class="emoji"></div></p>
+<table> 
+	<tr> 
+		<td class="think"><textarea id="data"></textarea></td> 
+		<td class="emojidude"><img id="translator" class="emojidudeimg" src="/emoji.png"></td> 
+		<td class="say"><div id="translation" class="emoji"></div></td> 
+	</tr> 
+</table>
+
 </center>
-	
-</div>
+
  
 
 </body>

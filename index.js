@@ -105,11 +105,21 @@ app.get('/translate/:id', function(request, response) {
 	words.forEach(word => {
 		if (word != null && word != "") {
 			var lowercaseWord = word.toLowerCase();
+			var comma = false;
+			var period = false;
+			var exclaim = false;
+			if (lowercaseWord.endsWith(".")) period = true;
+			else if (lowercaseWord.endsWith(",")) comma = true;
+			else if (lowercaseWord.endsWith("!")) exclaim = true;
+			if(comma || period || exclaim) lowercaseWord = lowercaseWord.substring(0, lowercaseWord.length-1);
 			if (lowercaseWord in secretDictionary) {
 				translation[pos] = secretDictionary[lowercaseWord]; 
 			} else {
 				translation[pos] = word;
 			}
+			if (period)  translation[pos] = translation[pos] + ".";
+			else if (comma)  translation[pos] = translation[pos] + ",";
+			else if (exclaim)  translation[pos] = translation[pos] + "!";
 			pos++;
 		}
 	});

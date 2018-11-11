@@ -60,6 +60,7 @@
 	height:490px;
 	
 	font-size: 30px;
+
 	
 	
 }
@@ -69,6 +70,15 @@
 	margin-left:115px;
 	width:350px;
 	height:200px;
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
 	
 }
 

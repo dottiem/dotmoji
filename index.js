@@ -40,6 +40,39 @@ secretDictionary["gross"] = "😰";
 secretDictionary["shush"] = "😈";
 secretDictionary["stinky"] = "👃";
 secretDictionary["funny"] = "😂";
+secretDictionary["hatchimal"] = "🥚";
+secretDictionary["santa"] = "🎅";
+secretDictionary["santa claus"] = "🎅";
+secretDictionary["stuffy"] = "🐖";
+secretDictionary["christmas"] = "🎄";
+secretDictionary["present"] = "🎁";
+secretDictionary["presents"] = "🎁";
+secretDictionary["pencil"] = "✏";
+secretDictionary["idea"] = "💥";
+secretDictionary["morning"] = "🌅";
+secretDictionary["Day"] = "🌞";
+secretDictionary["sun"] = "🌞";
+secretDictionary["night"] = "🌜";
+secretDictionary["nighttime"] = "🌜";
+secretDictionary["moon"] = "🌜";
+secretDictionary["parent"] = ""👤;
+secretDictionary["parents"] = "👥";
+secretDictionary["new years"] = "🎉";
+secretDictionary["new years eve"] = "🎉";
+secretDictionary["tv"] = "📺";
+secretDictionary["television"] = "📺";
+secretDictionary["video game"] = "🎮";
+
+secretDictionary["want"] = "✌";
+secretDictionary["watch"] = "👀";
+secretDictionary["play"] = "";
+secretDictionary["snowing "] = 🌨"";
+secretDictionary["sharpen"] = "";
+secretDictionary["love"] = "😎";
+secretDictionary["hate"] = "😖";
+secretDictionary["get dressed"] = "👖";
+secretDictionary["dressed"] = "👖";
+secretDictionary["getting dressed"] = "👖";
 
 
 

@@ -6,17 +6,16 @@ var emoji = require('emoji.json')
 
 
 var secretDictionary = new Object();
-secretDictionary["i"] = emoji[404].char;
-secretDictionary["you"] = emoji[884].char;
-secretDictionary["am"] = emoji[577].char;
-secretDictionary["are"] = emoji[396].char;
 secretDictionary["hello"] = emoji[386].char;
-secretDictionary["yes"] = emoji[413].char;
-secretDictionary["no"] = emoji[415].char;
-secretDictionary["agree"] = emoji[24].char;
-secretDictionary["disagree"] = emoji[410].char;
-
-
+secretDictionary["i"] = "👁";
+secretDictionary["you"] = "⭐";
+secretDictionary["am"] = "🕸";
+secretDictionary["are"] = "👂";
+secretDictionary["yes"] = "❤";
+secretDictionary["no"] = "💔";
+secretDictionary["agree"] = "😐";
+secretDictionary["disagree"] = "👄";
+secretDictionary["okay"] = "👌";
 secretDictionary["cora"] = "👑";
 secretDictionary["dottie"] = "⚽";
 secretDictionary["veda"] = "📘"
@@ -62,16 +61,22 @@ secretDictionary["new years eve"] = "🎉";
 secretDictionary["tv"] = "📺";
 secretDictionary["television"] = "📺";
 secretDictionary["video game"] = "🎮";
-
-
-
-
-
+secretDictionary["pen"] = "🖊";
+secretDictionary["sled"] = "🐧";
+secretDictionary["sledding"] = "🐧";
+secretDictionary["snow"] = "❄";
+secretDictionary["snowboard"] = "🏂";
+secretDictionary["snowboarding"] = "🏂";
+secretDictionary["fart"] = "💣";
+secretDictionary["farted"] = "💣";
+secretDictionary["stink bomb"] = "💣";
+secretDictionary["time"] = "⏲";
+secretDictionary["iPhone"] = "📱";
 secretDictionary["want"] = "✌";
 secretDictionary["watch"] = "👀";
-
-
-
+secretDictionary["play"] = "👅";
+secretDictionary["snowing "] = "🌨";
+secretDictionary["sharpen"] = "🗡";
 secretDictionary["love"] = "😎";
 secretDictionary["hate"] = "😖";
 secretDictionary["get dressed"] = "👖";

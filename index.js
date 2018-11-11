@@ -5,8 +5,7 @@ const PORT = process.env.PORT || 5000
 var emoji = require('emoji.json')
 
 
-var secretDictionary = new Object();
-secretDictionary["hello"] = emoji[386].char;
+var secretDictionary = new Map();
 secretDictionary["i"] = "👁";
 secretDictionary["you"] = "⭐";
 secretDictionary["am"] = "🕸";
@@ -86,6 +85,43 @@ secretDictionary["getting dressed"] = "👖";
 secretDictionary["us"] = emoji[1623].char;
 secretDictionary["usa"] = emoji[1623].char;
 secretDictionary["ana-sophia"] = emoji[202].char;
+secretDictionary["do"] = "✔";
+secretDictionary["don’t"] = "✖";
+secretDictionary["hello"] = "👋";
+secretDictionary["like"] = "🌈";
+secretDictionary["dislike"] = "🌧";
+secretDictionary["is"] = "😮";
+secretDictionary["it"] = "👽";
+secretDictionary["fall"] = "🠛";
+secretDictionary["has"] = "🠚";
+secretDictionary["have"] = "🠚";
+secretDictionary["was"] = "🠘";
+secretDictionary["the"] = "△";
+secretDictionary["a"] = "⩏";
+secretDictionary["will"] = "◯";
+secretDictionary["for"] = "llll";
+secretDictionary["to"] = "ll";
+secretDictionary["too"] = "ll";
+secretDictionary["she"] = "👩";
+secretDictionary["girl"] = "👩";
+secretDictionary["her"] = "👩";
+secretDictionary["woman"] = "👩";
+secretDictionary["he"] = "👦";
+secretDictionary["him"] = "👦";
+secretDictionary["boy"] = "👦";
+secretDictionary["man"] = "👦";
+secretDictionary["in"] = "💧";
+secretDictionary["inside"] = "💧";
+secretDictionary["out"] = "💦";
+secretDictionary["outside"] = "💦";
+secretDictionary["want"] = "✌";
+secretDictionary["with"] = "🔎";
+secretDictionary["because"] = "💬";
+secretDictionary["who"] = "💪";
+secretDictionary["so"] = "💭";
+secretDictionary["what"] = "?";
+secretDictionary["over"] = "😶";
+
 
 
 String.prototype.replaceAll = function(search, replacement) {
@@ -101,7 +137,8 @@ emoji.forEach(function(element) {
 });
 
 
-	
+
+
 
 
 var app = express().use(express.static(path.join(__dirname, 'public'))).set('views', path.join(__dirname, 'views')).set('view engine', 'ejs');
@@ -109,7 +146,7 @@ var app = express().use(express.static(path.join(__dirname, 'public'))).set('vie
 app.get('/', (req, res) => res.render('pages/index', {}))
 
 app.get('/wallpaper', (req, res) => res.render('pages/wallpaper', { emojis: emoji } ))
-app.get('/emojis', (req, res) => res.render('pages/emojis', { emojis: emoji } ))
+app.get('/emojis', (req, res) => res.render('pages/emojis', { emojis: secretDictionary } ))
 
 app.get('/translate/:id', function(request, response) {
 	

@@ -8,15 +8,12 @@
 <body>
 
 <div class="container">
-	
+
 	<table class="emoji">
-	<% for(var i=0; i < emojis.length; i++) { %>
+	<% for (var k in emojis) { %>
 	   <tr>
-	     <td><%= emojis[i].no %></td>
-	     <td><%= emojis[i].codes %></td>
-	     <td><%= emojis[i].char %></td>
-	     <td><%= emojis[i].name %></td>
-	     <td><%= emojis[i].keywords %></td>
+	     <td><%= emojis[k] %></td>
+	     <td><%= k %></td>
 	   </tr>
 	<% } %>
 	</table>

@@ -132,7 +132,7 @@ app.get('/translate/:id', function(request, response) {
 			if (lowercaseWord in secretDictionary) {
 				translation[pos] = secretDictionary[lowercaseWord]; 
 			} else {
-				translation[pos] = word;
+				translation[pos] = lowercaseWord;
 			}
 			if (period)  translation[pos] = translation[pos] + ".";
 			else if (comma)  translation[pos] = translation[pos] + ",";

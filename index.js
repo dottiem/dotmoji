@@ -85,7 +85,7 @@ secretDictionary["dressed"] = "👖";
 secretDictionary["getting dressed"] = "👖";
 secretDictionary["us"] = emoji[1623].char;
 secretDictionary["usa"] = emoji[1623].char;
-secretDictionary["ana-sophia"] = emoji[203].char;
+secretDictionary["ana-sophia"] = emoji[202].char;
 
 
 String.prototype.replaceAll = function(search, replacement) {

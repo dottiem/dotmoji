@@ -2,6 +2,21 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+  
+  <script>
+	  $(document).ready(function(){
+		$('#translator').click(function(){
+			$('#translation').empty().hide();
+			var dataToTranslate = document.getElementById('data').value;
+			var translationUrl = '/translate/' + dataToTranslate;
+			$.getJSON(translationUrl, function(data) {
+				$.each( data, function( key, val ) {
+					$('#translation').append(val + " ").fadeIn();
+				});
+			});
+		});
+	  });
+  </script>
 
 </head>
 
@@ -23,19 +38,11 @@
 
 <div class="container">
 	
-	<table class="emoji">
-	<% for(var i=0; i < emojis.length; i++) { %>
-	   <tr>
-	     <td><%= emojis[i].no %></td>
-	     <td><%= emojis[i].codes %></td>
-	     <td><%= emojis[i].char %></td>
-	     <td><%= emojis[i].name %></td>
-	     <td><%= emojis[i].keywords %></td>
-	   </tr>
-	<% } %>
-	</table>
-
-
+	<input id="data" width="300px" value="1" />
+	<input id="translator" type="button" value="translate" />
+	<div id="translation" class="emoji"></div>
+	
+	
 </div>
  
 
